@@ -1,10 +1,35 @@
 import React from 'react';
-
+import ReactTyped from 'react-typed';
+import Button from '../../Components/Button/Button';
+import myPic from '../../Images/Rayhan-removebg-preview.jpg'
 const Banner = () => {
     return (
-        <div>
-            
-        </div>
+        <div className="h-[93vh] flex justify-center items-center flex-col bg-[#112B3C]">
+      <div className="w-60 h-60 bg-red-500 rounded-full border overflow-hidden">
+        <img src={myPic} alt="" className="hover:scale-105 duration-700"/>
+      </div>
+      <div className="text-center">
+        <h1 className="text-3xl font-sans text-white my-1.5">Rayhan Mujumdar</h1>
+        <ReactTyped
+          className="text-gray-800 text-3xl"
+          strings={[
+            "I AM Frontend Developer",
+            "I AM MERN stack Developer",
+            "I AM React Developer",
+          ]}
+          typeSpeed={70}
+          backSpeed={50}
+          attr="placeholder"
+          loop
+        >
+          <input
+            type="text"
+            className="bg-transparent w-full text-center outline-none"
+          />
+        </ReactTyped>
+        <Button target="blank" className='mt-2' href='https://drive.google.com/file/d/1PTqCP6G3r0mnEbe4QjgYPhhuR7dSE9Q7/view?usp=sharing'>Download CV</Button>
+      </div>
+    </div>
     );
 };
 

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../../Images/logo.svg'
+import Button from '../Button/Button';
 
 const Navbar = () => {
     const [navbar,setNavbar] = useState(false)
@@ -10,23 +12,25 @@ const Navbar = () => {
             <i class="fa-solid fa-bars"></i>
           </button>
           <div className="collapse navbar-collapse flex-grow items-center" id="navbarSupportedContent1">
-            <Link to='/' className="text-xl text-white pr-2 font-semibold" href="#">Rayhan</Link>
+            <Link to='/' className="text-xl text-white pr-2 font-semibold" href="#">
+              <img src={logo} alt="" />
+            </Link>
             {/* Left links */}
             <ul className="navbar-nav flex flex-col pl-0 list-style-none mr-auto">
               <li className="nav-item p-2">
                 <Link to='/' className="nav-link text-white" href="#">Home</Link>
               </li>
               <li className="nav-item p-2">
-                <a className="nav-link text-white" href="#">About</a>
+                <Link to='/about' className="nav-link text-white" href="#">About</Link>
               </li>
               <li className="nav-item p-2">
-                <a className="nav-link text-white" href="#">Project</a>
+                <Link to='/project' className="nav-link text-white" href="#">Project</Link>
               </li>
               <li className="nav-item p-2">
-                <a className="nav-link text-white" href="#">Portfolio</a>
+                <Link to="/portfolio" className="nav-link text-white" href="#">Portfolio</Link>
               </li>
               <li className="nav-item p-2">
-                <a className="nav-link text-white" href="#">Contact</a>
+                <Link to='/contact' className="nav-link text-white" href="#">Contact</Link>
               </li>
             </ul>
             {/* Left links */}
@@ -35,7 +39,7 @@ const Navbar = () => {
           {/* Right elements */}
           <div className={`${navbar && 'mx-auto'}`}>
             {/* Icon */}
-            <a target="blank" href='https://drive.google.com/file/d/1PTqCP6G3r0mnEbe4QjgYPhhuR7dSE9Q7/view?usp=sharing' type="download" class="inline-block px-6 py-2.5 bg-gray-800 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-900 hover:shadow-lg focus:bg-gray-900 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-150 ease-in-out">Download CV</a>
+            <Button target="blank" href='https://drive.google.com/file/d/1PTqCP6G3r0mnEbe4QjgYPhhuR7dSE9Q7/view?usp=sharing'>Download CV</Button>
           </div>
           {/* Right elements */}
         </div>

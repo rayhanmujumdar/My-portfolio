@@ -4,7 +4,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Pages/Home/Home";
 function App() {
   return (
-      <div className="max-w-7xl mx-auto overflow-y-auto">
+      <div className="">
         <Navbar></Navbar>
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
