@@ -3,9 +3,10 @@ import ReactTyped from 'react-typed';
 import Button from '../../Components/Button/Button';
 import myPic from '../../Images/Rayhan-removebg-preview.jpg'
 const Banner = () => {
+  // clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
     return (
-        <div className="h-[93vh] flex justify-center items-center flex-col bg-[#112B3C]">
-      <div className="w-60 h-60 bg-red-500 rounded-full border overflow-hidden">
+        <div className="h-[93vh] flex justify-center items-center flex-col bg-[#112B3C]" style={{"clipPath": 'polygon(50% 0%, 100% 0, 100% 43%, 100% 78%, 100% 100%, 73% 82%, 0 100%, 0% 43%, 0 0);'}}>
+      <div className="w-60 h-60 bg-red-500 rounded-full border overflow-hidden" style={{'clipPath': "polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%)"}}>
         <img src={myPic} alt="" className="hover:scale-105 duration-700"/>
       </div>
       <div className="text-center">
