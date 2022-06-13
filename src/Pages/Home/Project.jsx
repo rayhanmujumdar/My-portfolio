@@ -5,16 +5,20 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import OwlCarousel from "react-owl-carousel";
+import ReactOwlCarousel from "react-owl-carousel";
 import SendIcon from "@mui/icons-material/Send";
 import Stack from "@mui/material/Stack";
+import { useNavigate } from "react-router-dom";
 
 export default function Project({ project }) {
-  console.log(project);
   const { id, title, images, description } = project;
+  const navigate = useNavigate()
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <OwlCarousel
+    <Card
+      className="flex justify-between flex-col"
+      sx={{maxWidth: 345}}
+    >
+      <ReactOwlCarousel
         items={1}
         autoplay
         loop
@@ -31,7 +35,7 @@ export default function Project({ project }) {
             alt="green iguana"
           />
         ))}
-      </OwlCarousel>
+      </ReactOwlCarousel>
       <CardContent>
         <Typography gutterBottom variant="h6" component="div">
           {title}
@@ -46,8 +50,8 @@ export default function Project({ project }) {
       </CardContent>
       <CardActions>
         <Stack direction="row" spacing={2}>
-          <Button variant="contained" endIcon={<SendIcon />}>
-            details
+          <Button onClick={() => navigate(`/project/${id}`)} variant="contained" endIcon={<SendIcon />}>
+            more info
           </Button>
         </Stack>
       </CardActions>

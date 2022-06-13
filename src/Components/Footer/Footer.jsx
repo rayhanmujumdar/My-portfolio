@@ -35,7 +35,7 @@ const Footer = () => {
             </li>
             <li className="w-6 h-6 bg-white text-center text-black rounded-full hover:bg-gray-700 hover:text-white duration-500">
               <a href="mailto:rayhanmujumdar0177@gmail.com" target="blank">
-                <i class="fa-solid fa-envelope"></i>
+                <i className="fa-solid fa-envelope"></i>
               </a>
             </li>
           </ul>

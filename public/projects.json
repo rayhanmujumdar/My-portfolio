@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": "1",
         "images": [
             "https://i.ibb.co/rsWCZxV/computer-market1.png",
             "https://i.ibb.co/N9CVhvp/computer-market2.png",
@@ -37,7 +37,7 @@
         "password": "121212"
     },
     {
-        "id": 2,
+        "id": "2",
         "images": [
             "https://i.ibb.co/s5Z7W8s/My-Choose-House-01.png",
             "https://i.ibb.co/q16zFBH/My-Choose-House-02.png",
@@ -69,7 +69,7 @@
         "gitServer": "https://github.com/rayhanmujumdar/assignment-11-server-side"
     },
     {
-        "id": 3,
+        "id": "3",
         "images": [
             "https://i.ibb.co/vX05BDn/Personal-trainer.png",
             "https://i.ibb.co/HCrfTS6/Personal-trainer-02.png",
@@ -91,14 +91,14 @@
             "Firebase",
             "Tailwind CSS",
             "Tailwind Component",
-            "React dom"
+            "React router dom"
         ],
         "liveLink": "https://my-gym-center.web.app/home",
         "gitClient": "https://github.com/rayhanmujumdar/assignment-10",
         "gitServer": null
     },
     {
-        "id": 4,
+        "id": "4",
         "images": [
             "https://i.ibb.co/vQqjsSw/task-manager-01.png",
             "https://i.ibb.co/dDpRkSF/Task-manager-02.png",

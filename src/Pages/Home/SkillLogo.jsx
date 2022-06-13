@@ -3,7 +3,7 @@ import ReactjsLogo from "../../Images/Icon/react-icon.png";
 import NodejsLogo from "../../Images/Icon/Node.js.png";
 import MongodbLogo from "../../Images/Icon/mongodb.svg";
 import ExpressjsLogo from "../../Images/Icon/Express.js.png";
-import OwlCarousel from "react-owl-carousel";
+import ReactOwlCarousel from "react-owl-carousel";
 
 const SkillLogo = () => {
   const logos = [
@@ -15,7 +15,7 @@ const SkillLogo = () => {
   return (
     <div className=" md:mx-10 rounded-md">
       <div className="md:container mx-auto flex justify-evenly items-center my-3 py-3">
-        <OwlCarousel items={4} autoplay={true} autoplayTimeout={2000} loop>
+        <ReactOwlCarousel items={4} autoplay={true} autoplayTimeout={2000} loop>
         {logos.map((logo) => (
           <div
             key={logo.id}
@@ -31,7 +31,7 @@ const SkillLogo = () => {
             </h4>
           </div>
         ))}
-        </OwlCarousel>
+        </ReactOwlCarousel>
       </div>
     </div>
   );
