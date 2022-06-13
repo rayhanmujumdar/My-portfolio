@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="bg-[#0B0E13]">
       <div className="container md:mx-auto text-white flex md:justify-between md:flex-row justify-center flex-col py-6 items-center gap-y-2">
-        <div>
+        <div className="flex md:items-start justify-center items-center flex-col">
           <ul className="flex gap-x-2">
             <li className="w-6 h-6 bg-white text-center text-black rounded-full hover:bg-gray-700 hover:text-white duration-500">
               <a href="https://twitter.com/Rayhan_Mujumdar" target="blank">
@@ -33,10 +33,16 @@ const Footer = () => {
                 <i className="fa-brands fa-github"></i>
               </a>
             </li>
+            <li className="w-6 h-6 bg-white text-center text-black rounded-full hover:bg-gray-700 hover:text-white duration-500">
+              <a href="mailto:rayhanmujumdar0177@gmail.com" target="blank">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </li>
           </ul>
           <div className="mt-1.5">
-            <a href="tel:01776464695" >
-              <span className="text-xl text-yellow-700">Phone:</span> <span className="hover:underline">01776464695</span>
+            <a href="tel:01776464695">
+              <span className="text-xl text-yellow-700">Phone:</span>{" "}
+              <span className="hover:underline">01776464695</span>
             </a>
           </div>
         </div>
