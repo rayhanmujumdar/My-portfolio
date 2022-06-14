@@ -31,8 +31,8 @@
             "JWT (JSON Web Token)"
         ],
         "liveLink": "https://assignment-12-full-stack.web.app/home",
-        "gitClient": "https://github.com/rayhanmujumdar/assignment-12Manufacturerproduct-client-site",
-        "gitServer": "https://github.com/rayhanmujumdar/assignment-12manufacturercompany-server-site",
+        "gitClient": "https://github.com/rayhanmujumdar/assignment-12-Manufacturerproduct-client-site",
+        "gitServer": "https://github.com/rayhanmujumdar/assignment-12-manufacturercompany-server-site",
         "AdminEmail" : "rayhanmojumdar0177@gmail.com",
         "password": "121212"
     },
@@ -45,7 +45,7 @@
             "https://i.ibb.co/dgQvRn9/My-Choose-House-04png.png",
             "https://i.ibb.co/s9CXRY9/My-Choose-House-05png.png"
         ],
-        "title": "MyChooseHouse(WareHouse)",
+        "title": "MyChooseHouse (WareHouse)",
         "description": [
             "Use to latest technology",
             "unique design no copy or clone",
@@ -105,7 +105,7 @@
             "https://i.ibb.co/1JRx0cH/Task-manager-03.png",
             "https://i.ibb.co/F7LnKbH/Task-manager-04.png"
         ],
-        "title": "Task Manager ( Simple TODO APP )",
+        "title": "Task Manager(Simple TODO APP)",
         "description": [
             "Implement a beautiful user interface with React.js.",
             "Full-stack Website using the React, Node.js, Express.js, MongoDB",
