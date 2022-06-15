@@ -28,7 +28,7 @@ const Banner = () => {
           />
         </ReactTyped>
         <Button target="blank" className='mt-2' href='https://www.linkedin.com/in/rayhanmujumdar/'>
-          <span className='mr-3'>Profile</span>
+          <span className='mr-3'>Hire me</span>
           <i className="fa-brands fa-linkedin"></i>
         </Button>
       </div>

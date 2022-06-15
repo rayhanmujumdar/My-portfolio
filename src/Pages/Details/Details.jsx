@@ -1,3 +1,4 @@
+import Button from "../../Components/Button/Button";
 import React from "react";
 import Modal from "react-modal";
 import ReactOwlCarousel from "react-owl-carousel";
@@ -15,7 +16,7 @@ const customStyles = {
     maxWidth: "800px",
     position: "relative",
     border: "0",
-    maxHeight: '700px'
+    maxHeight: "700px",
   },
 };
 Modal.setAppElement("#root");
@@ -24,13 +25,21 @@ const Details = ({ modalIsOpen, setIsOpen, project }) => {
   function closeModal() {
     setIsOpen(false);
   }
-  const { title, images, description, technology,gitClient,gitServer,liveLink } = project;
+  const {
+    title,
+    images,
+    description,
+    technology,
+    gitClient,
+    gitServer,
+    liveLink,
+  } = project;
   return (
     <div>
       <Modal
         isOpen={modalIsOpen}
-        onRequestClose={closeModal}
         style={customStyles}
+        onRequestClose={closeModal}
         contentLabel="Example Modal"
       >
         <div>
@@ -74,19 +83,22 @@ const Details = ({ modalIsOpen, setIsOpen, project }) => {
             })}
           </ReactOwlCarousel>
         </div>
-        <div className="flex gap-x-3">
-          <a href={liveLink} target="blank" className="flex gap-x-2 items-center border border-gray-500 px-2 py-1 rounded-md">
-            <span>Live Link</span>
+        <div className="flex flex-wrap gap-3">
+          <Button target="_blank" className="mt-2" href={liveLink}>
+            <span className="mr-3">Live Link</span>
             <i class="fa-solid fa-globe"></i>
-          </a>
-          <a href={gitClient} target="blank" className="flex gap-x-2 items-center border border-gray-500 px-2 py-1 rounded-md">
-            <span>Client side</span>
+          </Button>
+          <Button target="_blank" className="mt-2" href={gitClient}>
+            <span className="mr-3">Client side</span>
             <i class="fa-brands fa-github"></i>
-          </a>
-          <a href={gitServer} target="blank" className="flex gap-x-2 items-center border border-gray-500 px-2 py-1 rounded-md">
-            <span>Server side</span>
+          </Button>
+          <Button target="_blank" className="mt-2" href={gitServer}>
+            <span className="mr-3">Server side</span>
             <i class="fa-brands fa-github"></i>
-          </a>
+          </Button>
+        </div>
+        <div onClick={closeModal} className="fixed top-5 right-5 w-10 h-10 bg-gray-600 text-center leading-10 rounded-full hover:bg-red-500 duration-200">
+          <i class="fa-solid fa-x"></i>
         </div>
       </Modal>
     </div>

@@ -19,55 +19,58 @@ export default function Project({ project }) {
   }
   const [modalIsOpen, setIsOpen] = React.useState(false);
   return (
-      <Card
-        className="flex justify-between flex-col"
-        sx={{ maxWidth: 345, padding: "10px" }}
+    <Card
+      className="flex justify-between flex-col"
+      sx={{ maxWidth: 345, padding: "10px" }}
+    >
+      <ReactOwlCarousel
+        items={1}
+        autoplay
+        loop
+        autoplayTimeout={3000}
+        autoplayHoverPause={true}
       >
-        <ReactOwlCarousel
-          items={1}
-          
-        >
-          {images.map((img, index) => (
-            <CardMedia
-              key={index}
-              className="item"
-              component="img"
-              height="140"
-              image={img}
-              alt="green iguana"
-            />
-          ))}
-        </ReactOwlCarousel>
-        <CardContent>
-          <Typography gutterBottom variant="h6" component="div">
-            {title}
-          </Typography>
-          <Typography variant="body2" component="div" color="text.secondary">
-            <ol className="list-disc">
-              {description.map((des, index) => (
-                <li key={index}>{des}</li>
-              ))}
-            </ol>
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Stack direction="row" spacing={2}>
-            <Button
-              sx={{ background: "#112B3C" }}
-              onClick={openModal}
-              variant="contained"
-              endIcon={<SendIcon />}
-            >
-              more info
-            </Button>
-            <Details
-              project={project}
-              modalIsOpen={modalIsOpen}
-              openModal={openModal}
-              setIsOpen={setIsOpen}
-            ></Details>
-          </Stack>
-        </CardActions>
-      </Card>
+        {images.map((img, index) => (
+          <CardMedia
+            key={index}
+            className="item"
+            component="img"
+            height="140"
+            image={img}
+            alt="green iguana"
+          />
+        ))}
+      </ReactOwlCarousel>
+      <CardContent>
+        <Typography gutterBottom variant="h6" component="div">
+          {title}
+        </Typography>
+        <Typography variant="body2" component="div" color="text.secondary">
+          <ol className="list-disc">
+            {description.map((des, index) => (
+              <li key={index}>{des}</li>
+            ))}
+          </ol>
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Stack direction="row" spacing={2}>
+          <Button
+            sx={{ background: "#112B3C" }}
+            onClick={openModal}
+            variant="contained"
+            endIcon={<SendIcon />}
+          >
+            more info
+          </Button>
+          <Details
+            project={project}
+            modalIsOpen={modalIsOpen}
+            openModal={openModal}
+            setIsOpen={setIsOpen}
+          ></Details>
+        </Stack>
+      </CardActions>
+    </Card>
   );
 }
