@@ -10,7 +10,7 @@ const customStyles = {
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
-    background: "#112B3C",
+    background: "#181818",
     color: "white",
     overflow: "auto",
     maxWidth: "800px",
@@ -49,9 +49,9 @@ const Details = ({ modalIsOpen, setIsOpen, project }) => {
               Use Technology
             </h4>
             <ul className="flex flex-wrap gap-2 my-2">
-              {technology.map((tech) => {
+              {technology.map((tech,index) => {
                 return (
-                  <li className="bg-[#A16207] p-0.5 rounded-md">{tech}</li>
+                  <li key={index} className="bg-[#A16207] p-0.5 rounded-md">{tech}</li>
                 );
               })}
             </ul>
@@ -86,19 +86,19 @@ const Details = ({ modalIsOpen, setIsOpen, project }) => {
         <div className="flex flex-wrap gap-3">
           <Button target="_blank" className="mt-2" href={liveLink}>
             <span className="mr-3">Live Link</span>
-            <i class="fa-solid fa-globe"></i>
+            <i className="fa-solid fa-globe"></i>
           </Button>
           <Button target="_blank" className="mt-2" href={gitClient}>
             <span className="mr-3">Client side</span>
-            <i class="fa-brands fa-github"></i>
+            <i className="fa-brands fa-github"></i>
           </Button>
           <Button target="_blank" className="mt-2" href={gitServer}>
             <span className="mr-3">Server side</span>
-            <i class="fa-brands fa-github"></i>
+            <i className="fa-brands fa-github"></i>
           </Button>
         </div>
         <div onClick={closeModal} className="fixed top-4 right-5 w-10 h-10 bg-gray-600 text-center leading-10 rounded-full hover:bg-red-500 duration-200">
-          <i class="fa-solid fa-x"></i>
+          <i className="fa-solid fa-x"></i>
         </div>
       </Modal>
     </div>

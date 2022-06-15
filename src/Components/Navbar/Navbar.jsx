@@ -1,13 +1,14 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import logo from "../../Images/logo.svg";
 import Button from "../Button/Button";
 import { HashLink } from "react-router-hash-link";
+import useNavbar from "../../Hooks/useNavbar";
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
+  const [nav] = useNavbar()
   return (
-    <nav className="relative w-full flex flex-wrap items-center justify-between py-3 bg-[#112B3C] text-gray-200 navbar navbar-expand-lg">
+    <nav className={`${nav && "fixed top-0"} duration-500 z-30 w-full flex flex-wrap items-center justify-between py-3 bg-[#181818] text-gray-200 navbar navbar-expand-lg`}>
       <div className="container mx-auto w-full flex flex-wrap items-center justify-between px-6 ">
         <button
           onClick={() => setNavbar(!navbar)}
@@ -30,16 +31,15 @@ const Navbar = () => {
           id="navbarSupportedContent1"
         >
           <HashLink
-            to="/"
+            to="/#home"
             className="text-xl text-white pr-2 font-semibold"
-            href="#"
           >
             <img src={logo} alt="" />
           </HashLink>
           {/* Left links */}
           <ul className="navbar-nav flex flex-col pl-0 list-style-none mr-auto">
             <li className="nav-item p-2">
-              <HashLink to="/" className="nav-link text-white" href="#">
+              <HashLink to="/#home" className="nav-link text-white">
                 Home
               </HashLink>
             </li>
@@ -49,7 +49,7 @@ const Navbar = () => {
               </HashLink>
             </li>
             <li className="nav-item p-2">
-              <HashLink to="/project" className="nav-link text-white" href="#">
+              <HashLink smooth to="/#projects" className="nav-link text-white">
                 Project
               </HashLink>
             </li>

@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
-    <div className="bg-[#0B0E13]">
+    <div className="bg-[#181818]">
       <div className="container md:mx-auto text-white flex md:justify-between md:flex-row justify-center flex-col py-6 items-center gap-y-2">
         <div className="flex md:items-start justify-center items-center flex-col">
           <ul className="flex gap-x-2">
