@@ -42,7 +42,7 @@ const Details = ({ modalIsOpen, setIsOpen, project }) => {
         onRequestClose={closeModal}
         contentLabel="Example Modal"
       >
-        <div>
+        <div className="pt-10">
           <h1 className="md:text-3xl text-xl text-center pb-4">{title}</h1>
           <div>
             <h4 className="text-xl font-semibold border-b border-gray-500 pb-1">
@@ -97,7 +97,7 @@ const Details = ({ modalIsOpen, setIsOpen, project }) => {
             <i class="fa-brands fa-github"></i>
           </Button>
         </div>
-        <div onClick={closeModal} className="fixed top-5 right-5 w-10 h-10 bg-gray-600 text-center leading-10 rounded-full hover:bg-red-500 duration-200">
+        <div onClick={closeModal} className="fixed top-4 right-5 w-10 h-10 bg-gray-600 text-center leading-10 rounded-full hover:bg-red-500 duration-200">
           <i class="fa-solid fa-x"></i>
         </div>
       </Modal>

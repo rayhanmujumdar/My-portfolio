@@ -6,13 +6,14 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import ReactOwlCarousel from "react-owl-carousel";
-import SendIcon from "@mui/icons-material/Send";
+import InfoIcon from '@mui/icons-material/Info';
 import Stack from "@mui/material/Stack";
 import { useNavigate } from "react-router-dom";
 import Details from "../Details/Details";
+import LanguageIcon from '@mui/icons-material/Language';
 
 export default function Project({ project }) {
-  const { id, title, images, description } = project;
+  const { id, title, images, description,liveLink } = project;
   const navigate = useNavigate();
   function openModal() {
     setIsOpen(true);
@@ -46,11 +47,11 @@ export default function Project({ project }) {
           {title}
         </Typography>
         <Typography variant="body2" component="div" color="text.secondary">
-          <ol className="list-disc">
+          <ul>
             {description.map((des, index) => (
-              <li key={index}>{des}</li>
+              <li key={index}>{index + 1}. {des}</li>
             ))}
-          </ol>
+          </ul>
         </Typography>
       </CardContent>
       <CardActions>
@@ -59,17 +60,26 @@ export default function Project({ project }) {
             sx={{ background: "#112B3C" }}
             onClick={openModal}
             variant="contained"
-            endIcon={<SendIcon />}
+            endIcon={<InfoIcon />}
           >
             more info
           </Button>
+          <Button
+          href={liveLink}
+          target="_blank"
+            sx={{ background: "#112B3C" }}
+            variant="contained"
+            endIcon={<LanguageIcon />}
+          >
+            Live site
+          </Button>
+        </Stack>
           <Details
             project={project}
             modalIsOpen={modalIsOpen}
             openModal={openModal}
             setIsOpen={setIsOpen}
           ></Details>
-        </Stack>
       </CardActions>
     </Card>
   );
