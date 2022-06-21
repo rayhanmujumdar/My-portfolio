@@ -24,6 +24,9 @@
 .owl-item{
   position: relative;
 }
+.active{
+  color: red;
+}
 @media (min-width: 320px) and (max-width: 480px) {
   .filter-img{
     filter: grayscale(0%);

@@ -4,7 +4,7 @@ import Button from '../../Components/Button/Button';
 import myPic from '../../Images/Rayhan-removebg-preview.jpg'
 const Banner = () => {
     return (
-        <div id='banner' className="h-[92vh] flex justify-center items-center flex-col bg-[#181818]" style={{"clipPath":'polygon(50% 0%, 100% 0, 100% 43%, 100% 78%, 100% 100%, 73% 88%, 0 100%, 0% 43%, 0 0)'}}>
+        <div id='banner' className="h-[100vh] flex justify-center items-center flex-col bg-[#181818]" style={{"clipPath":'polygon(50% 0%, 100% 0, 100% 43%, 100% 78%, 100% 100%, 73% 88%, 0 100%, 0% 43%, 0 0)'}}>
       <div className="w-60 h-60 rounded-full border overflow-hidden" style={{"clipPath":"polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%)"}}>
         <img src={myPic} alt="" className="hover:scale-105 duration-700"/>
       </div>

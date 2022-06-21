@@ -23,6 +23,7 @@
     "react-scripts": "5.0.0",
     "react-spring": "^9.4.5",
     "react-typed": "^1.2.0",
+    "react-ui-scrollspy": "^2.1.0",
     "styled-components": "^5.3.5",
     "tw-elements": "^1.0.0-alpha12",
     "web-vitals": "^2.1.0"

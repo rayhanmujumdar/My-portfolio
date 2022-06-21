@@ -6,6 +6,7 @@ import Home from "./Pages/Home/Home";
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import { Toaster } from 'react-hot-toast';
+import NotFound from "./Components/NotFound/NotFound";
 function App() {
   return (
       <div>
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
           <Route path="/home" element={<Home></Home>}></Route>
+          <Route path="*" element={<NotFound></NotFound>}></Route>
         </Routes>
         <Footer></Footer>
         <Toaster/>

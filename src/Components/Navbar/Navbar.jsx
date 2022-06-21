@@ -3,12 +3,24 @@ import logo from "../../Images/logo.svg";
 import Button from "../Button/Button";
 import { HashLink } from "react-router-hash-link";
 import useNavbar from "../../Hooks/useNavbar";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
-  const [nav] = useNavbar()
+  const [navSize, navColor] = useNavbar();
+  // new
+  const location = useLocation();
+
+  // before:w-full before:h-1 before:bg-orange-500 before:absolute before:bottom-0 before:left-0
   return (
-    <nav className={`${nav && "fixed top-0"} duration-500 z-30 w-full flex flex-wrap items-center justify-between py-3 bg-[#181818] text-gray-200 navbar navbar-expand-lg`}>
+    <nav
+      style={{
+        backgroundColor: navColor,
+        height: navSize,
+        transition: "all 1s",
+      }}
+      className={`fixed top-0 z-30 w-full flex flex-wrap items-center justify-between py-3 bg-[#181818] text-gray-200 navbar navbar-expand-lg`}
+    >
       <div className="container mx-auto w-full flex flex-wrap items-center justify-between px-6 ">
         <button
           onClick={() => setNavbar(!navbar)}
@@ -39,31 +51,56 @@ const Navbar = () => {
           {/* Left links */}
           <ul className="navbar-nav flex flex-col pl-0 list-style-none mr-auto">
             <li className="nav-item p-2">
-              <HashLink to="/#home" className="nav-link text-white">
+              <HashLink
+                to="/#home"
+                className={`relative nav-link text-white before:inline-block ${
+                  location.hash === "#home" && "text-orange-500 "
+                }`}
+              >
                 Home
               </HashLink>
             </li>
             <li className="nav-item p-2">
-              <HashLink to="/about" className="nav-link text-white" href="#">
+              <HashLink
+                smooth
+                to="/#about"
+                className={`relative nav-link text-white ${
+                  location.hash === "#about" && "text-orange-500"
+                }`}
+              >
                 About
               </HashLink>
             </li>
             <li className="nav-item p-2">
-              <HashLink smooth to="/#projects" className="nav-link text-white">
+              <HashLink
+                smooth
+                to="/#projects"
+                className={`relative nav-link text-white ${
+                  location.hash === "#projects" && "text-orange-500"
+                }`}
+              >
                 Project
               </HashLink>
             </li>
             <li className="nav-item p-2">
               <HashLink
-                to="/portfolio"
-                className="nav-link text-white"
-                href="#"
+                to="/#skill"
+                smooth
+                className={`relative nav-link text-white ${
+                  location.hash === "#skill" && "text-orange-500"
+                }`}
               >
-                Portfolio
+                Skills
               </HashLink>
             </li>
             <li className="nav-item p-2">
-              <HashLink smooth to="/#contact" className="nav-link text-white" >
+              <HashLink
+                smooth
+                to="/#contact"
+                className={`relative nav-link text-white ${
+                  location.hash === "#contact" && "text-orange-500"
+                }`}
+              >
                 Contact
               </HashLink>
             </li>
