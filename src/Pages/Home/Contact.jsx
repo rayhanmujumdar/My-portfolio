@@ -1,9 +1,12 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
+import SetTitle from "../../Components/SetTitle/SetTitle";
+import { useLocation } from "react-router-dom";
 
 const Contact = () => {
   const form = useRef();
+  const {hash} = useLocation()
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
@@ -29,6 +32,7 @@ const Contact = () => {
   return (
     <div id="contact" className="container mx-auto py-10">
       <div>
+      {hash.includes("contact") && <SetTitle title={"Contact"}></SetTitle>}
         <h1 className="text-4xl text-center mb-2 font-semibold">
           <span className="text-[#A16207]">Contact</span> forms
         </h1>

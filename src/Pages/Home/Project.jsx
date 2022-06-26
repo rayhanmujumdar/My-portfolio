@@ -8,22 +8,24 @@ import Typography from "@mui/material/Typography";
 import ReactOwlCarousel from "react-owl-carousel";
 import InfoIcon from '@mui/icons-material/Info';
 import Stack from "@mui/material/Stack";
-import { useNavigate } from "react-router-dom";
 import Details from "../Details/Details";
 import LanguageIcon from '@mui/icons-material/Language';
+import SetTitle from "../../Components/SetTitle/SetTitle";
+import { useLocation } from "react-router-dom";
 
 export default function Project({ project }) {
   const { id, title, images, description,liveLink } = project;
-  const navigate = useNavigate();
   function openModal() {
     setIsOpen(true);
   }
+  const {hash} = useLocation()
   const [modalIsOpen, setIsOpen] = React.useState(false);
   return (
     <Card
       className="flex justify-between flex-col"
       sx={{ maxWidth: 345, padding: "10px" }}
     >
+      {hash.includes("project") && <SetTitle title={"Project"}></SetTitle>}
       <ReactOwlCarousel
         items={1}
         autoplay

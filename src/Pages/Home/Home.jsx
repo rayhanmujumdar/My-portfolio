@@ -6,6 +6,7 @@ import Contact from './Contact'
 import { HashLink } from "react-router-hash-link";
 import About from "./About";
 import ScrollSpy from "react-ui-scrollspy";
+import SetTitle from "../../Components/SetTitle/SetTitle";
 const Home = () => {
   const [scroll,setScroll] = useState(false)
   useEffect(() => {
@@ -25,6 +26,7 @@ const Home = () => {
   return (
     <ScrollSpy>
       <Banner></Banner>
+      <SetTitle title={"Home"}></SetTitle>
       <SkillLogo></SkillLogo>
       <About></About>
       <Projects></Projects>

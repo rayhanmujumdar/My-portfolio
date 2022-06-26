@@ -43,6 +43,7 @@ const Navbar = () => {
           id="navbarSupportedContent1"
         >
           <HashLink
+            smooth
             to="/#home"
             className="text-xl text-white pr-2 font-semibold"
           >
@@ -52,6 +53,7 @@ const Navbar = () => {
           <ul className="navbar-nav flex flex-col pl-0 list-style-none mr-auto">
             <li className="nav-item p-2">
               <HashLink
+                smooth
                 to="/#home"
                 className={`relative nav-link text-white before:inline-block ${
                   location.hash === "#home" && "text-orange-500 "
@@ -84,7 +86,7 @@ const Navbar = () => {
             </li>
             <li className="nav-item p-2">
               <HashLink
-                to="/#skill"
+                to="/#skills"
                 smooth
                 className={`relative nav-link text-white ${
                   location.hash === "#skill" && "text-orange-500"

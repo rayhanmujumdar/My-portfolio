@@ -1,8 +1,12 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
+import SetTitle from "../../Components/SetTitle/SetTitle";
 
 const About = () => {
+  const {hash} = useLocation()
   return (
     <div id="about" className="container md:mx-auto py-10">
+      {hash.includes("about") && <SetTitle title={"About"}></SetTitle>}
       <div className="grid md:grid-cols-2 gap-4">
         <div>
           <img
