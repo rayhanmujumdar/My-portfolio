@@ -36,9 +36,11 @@
   }
   .owl-next{
     font-size: 60px !important;
+    color: white !important;
   }
   .owl-prev{
     font-size: 60px !important;
+    color: white !important;
   }
   .owl-nav{
     transform: translateY(-65%);

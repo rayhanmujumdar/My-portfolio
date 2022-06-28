@@ -10,6 +10,7 @@ const Navbar = () => {
   const [navSize, navColor] = useNavbar();
   // new
   const location = useLocation();
+  // console.log(navSize,navColor)
 
   // before:w-full before:h-1 before:bg-orange-500 before:absolute before:bottom-0 before:left-0
   return (
@@ -19,7 +20,7 @@ const Navbar = () => {
         height: navSize,
         transition: "all 1s",
       }}
-      className={`fixed top-0 z-30 w-full flex flex-wrap items-center justify-between py-3 bg-[#181818] text-gray-200 navbar navbar-expand-lg`}
+      className={`fixed top-0 z-30 w-full flex flex-wrap items-center justify-between py-3 text-gray-200 navbar navbar-expand-lg`}
     >
       <div className={`container lg:bg-transparent p-2 mx-auto w-full flex flex-wrap items-center justify-between px-6 bg-[${navColor}]`}>
         <button
@@ -39,7 +40,7 @@ const Navbar = () => {
           )}
         </button>
         <div
-          className={`collapse navbar-collapse flex-grow items-center bg-[${navColor}]`}
+          className={`collapse navbar-collapse flex-grow items-center bg-[]`}
           id="navbarSupportedContent1"
         >
           <HashLink
