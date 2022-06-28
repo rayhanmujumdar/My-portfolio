@@ -39,7 +39,7 @@ const Navbar = () => {
           )}
         </button>
         <div
-          className="collapse navbar-collapse flex-grow items-center"
+          className={`collapse navbar-collapse flex-grow items-center bg-[${navColor}]`}
           id="navbarSupportedContent1"
         >
           <HashLink
@@ -89,7 +89,7 @@ const Navbar = () => {
                 to="/#skills"
                 smooth
                 className={`relative nav-link text-white ${
-                  location.hash === "#skill" && "text-orange-500"
+                  location.hash === "#skills" && "text-orange-500"
                 }`}
               >
                 Skills

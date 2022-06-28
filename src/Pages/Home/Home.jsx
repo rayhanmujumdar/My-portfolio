@@ -31,8 +31,8 @@ const Home = () => {
       <About></About>
       <Projects></Projects>
       <Contact></Contact>
-      {scroll && <HashLink smooth to="/#home" className="text-center leading-[56px] cursor-pointer text-2xl fixed z-20 bottom-10 md:right-10 right-5 w-10 h-14 rounded-full md:bg-yellow-700 md:animate-none animate-pulse">
-        <i className="fa-solid fa-angle-up text-white"></i>
+      {scroll && <HashLink smooth to="/#home" className="text-center md:leading-[56px] leading-10 cursor-pointer text-2xl fixed z-20 bottom-10 md:right-10 right-4 md:w-10 md:h-14 w-10 h-10 rounded-full bg-yellow-700 ">
+        <i className="fa-solid fa-angle-up text-white md:animate-none animate-pulse"></i>
       </HashLink>}
     </ScrollSpy>
   );

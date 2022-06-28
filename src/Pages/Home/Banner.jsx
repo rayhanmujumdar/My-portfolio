@@ -32,8 +32,8 @@ const Banner = () => {
             "I AM MERN stack Developer",
             "I AM React Developer",
           ]}
-          typeSpeed={70}
-          backSpeed={50}
+          typeSpeed={100}
+          backSpeed={20}
           attr="placeholder"
           loop
         >
