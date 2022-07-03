@@ -9,7 +9,7 @@ import { Toaster } from 'react-hot-toast';
 import NotFound from "./Components/NotFound/NotFound";
 function App() {
   return (
-      <div>
+      <div className="app">
         <Navbar></Navbar>
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>

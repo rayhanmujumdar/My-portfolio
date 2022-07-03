@@ -92,10 +92,10 @@ const Details = ({ modalIsOpen, setIsOpen, project }) => {
             <span className="mr-3">Client side</span>
             <i className="fa-brands fa-github"></i>
           </Button>
-          <Button target="_blank" className="mt-2" href={gitServer}>
+          {gitServer && <Button target="_blank" className="mt-2" href={gitServer}>
             <span className="mr-3">Server side</span>
             <i className="fa-brands fa-github"></i>
-          </Button>
+          </Button>}
         </div>
         <div onClick={closeModal} className="fixed top-4 right-5 w-10 h-10 bg-gray-600 text-center leading-10 rounded-full hover:bg-red-500 duration-200">
           <i className="fa-solid fa-x"></i>

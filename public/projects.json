@@ -31,8 +31,8 @@
             "JWT (JSON Web Token)"
         ],
         "liveLink": "https://assignment-12-full-stack.web.app/home",
-        "gitClient": "https://github.com/rayhanmujumdar/assignment-12-Manufacturerproduct-client-site",
-        "gitServer": "https://github.com/rayhanmujumdar/assignment-12-manufacturercompany-server-site",
+        "gitClient": "https://github.com/rayhanmujumdar/assignment-12-Manufacturer-product-client-site",
+        "gitServer": "https://github.com/rayhanmujumdar/assignment-12-manufacturer-company-server-site",
         "AdminEmail" : "rayhanmojumdar0177@gmail.com",
         "password": "121212"
     },
@@ -65,7 +65,7 @@
             "JWT (JSON Web Token)"
         ],
         "liveLink": "https://assignment-11-wirehouse.web.app/home",
-        "gitClient": ": https://github.com/rayhanmujumdar/Assignment-11-warehouse",
+        "gitClient": "https://github.com/rayhanmujumdar/Assignment-11-warehouse",
         "gitServer": "https://github.com/rayhanmujumdar/assignment-11-server-side"
     },
     {

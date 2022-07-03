@@ -50,3 +50,31 @@
   z-index: 100;
   background-color: rgba(0, 0, 0, 0.7) !important;
 }
+html::-webkit-scrollbar{
+  display: none;
+}
+.ReactModal__Content::-webkit-scrollbar{
+  /* background-color: red; */
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #464D53; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #656565; 
+}
