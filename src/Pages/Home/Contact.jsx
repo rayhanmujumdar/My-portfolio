@@ -9,7 +9,8 @@ const Contact = () => {
   const {hash} = useLocation()
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs
+    if(e.target.email.value){
+      emailjs
       .sendForm(
         "service_074jhbg",
         "template_h5bbx3i",
@@ -18,7 +19,6 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
           toast.success("Email sended", {
             id: "success",
           });
@@ -27,7 +27,8 @@ const Contact = () => {
           console.log(error.text);
         }
       );
-    e.target.reset();
+      e.target.reset();
+    }
   };
   return (
     <div id="contact" className="container mx-auto py-10">
