@@ -28,6 +28,10 @@ const Contact = () => {
         }
       );
       e.target.reset();
+    }else{
+      toast.error("Fill the Email and description",{
+        id: 'error'
+      })
     }
   };
   return (
