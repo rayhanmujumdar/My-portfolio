@@ -7,6 +7,9 @@ import { useLocation } from "react-router-dom";
 const Contact = () => {
   const form = useRef();
   const {hash} = useLocation()
+  console.log(process.env.REACT_APP_PUBLIC_KEY)
+  console.log(process.env.REACT_APP_SERVICE)
+  console.log(process.env.REACT_APP_TEMPLATE)
   const sendEmail = (e) => {
     e.preventDefault();
     if(e.target.email.value){
@@ -24,9 +27,9 @@ const Contact = () => {
           });
         },
         (error) => {
-          toast.error(error.text,{
-            id: 'error'
-          });
+          // toast.error(error.text,{
+          //   id: 'error'
+          // });
         }
       );
       e.target.reset();
