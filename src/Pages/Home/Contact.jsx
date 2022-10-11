@@ -12,10 +12,10 @@ const Contact = () => {
     if(e.target.email.value){
       emailjs
       .sendForm(
-        "service_074jhbg",
-        "template_h5bbx3i",
+        process.env.REACT_APP_SERVICE,
+        process.env.REACT_APP_TEMPLATE,
         form.current,
-        "NHrZ_Wua8LU96vAom"
+        process.env.REACT_APP_PUBLIC_KEY
       )
       .then(
         (result) => {
@@ -24,7 +24,9 @@ const Contact = () => {
           });
         },
         (error) => {
-          console.log(error.text);
+          toast.error(error.text,{
+            id: 'error'
+          });
         }
       );
       e.target.reset();
